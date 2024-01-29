@@ -34,7 +34,7 @@ jobs:
       - name: Make ISO (${{ env.version }})
         run: |
           chmod +x *.sh
-          mv *.sh aports/scripts/
+          cp *.sh aports/scripts/
 
           aports/scripts/mkimage.sh \
               --tag ${version} \
