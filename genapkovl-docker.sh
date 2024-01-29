@@ -79,10 +79,6 @@ mkdir /etc/sudoers.d
 echo "\$user ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/\$user && chmod 0440 /etc/sudoers.d/\$user
 EOF
 
-mkdir -p "$tmp"/usr/bin
-makefile root:root 0755 "$tmp"/usr/bin/alpdock-run-portainer <<EOF
-#!/bin/sh
-
 rc_add devfs sysinit
 rc_add dmesg sysinit
 rc_add mdev sysinit
